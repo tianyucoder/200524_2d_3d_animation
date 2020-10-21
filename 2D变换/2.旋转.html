@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>旋转</title>
+	<style>
+		/* 
+			旋转:
+				transform: rotate(角度) 单位是deg,正值是顺时针旋转，负值是逆时针旋转
+				默认是沿着Z轴旋转
+			*/
+			.demo{
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+				margin-top: 200px;
+				background-color: purple;
+				transition: 1s linear;
+			}
+			.demo:hover {
+				transform: rotate(-45deg);
+			}
+	</style>
+</head>
+<body>
+	<div class="demo"></div>
+</body>
+</html>

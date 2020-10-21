@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>旋转轴</title>
+  <style>
+    /*
+				沿着x轴旋转：从屏幕右侧向左看,正值是顺时针,负值是逆时针,旋转中心点在y轴
+				沿着y轴旋转：从屏幕由底往上看,正值是顺时针,负值是逆时针，旋转中心点在x轴
+    */
+		.container{
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 0 auto;
+			margin-top: 200px;
+		}
+		.demo{
+				width: 200px;
+				height: 200px;
+				background-color: purple;
+				transition: 1s linear;
+				transform-origin: left bottom;
+				/* transform-origin: 20px 20px; */
+			}
+			.demo:hover {
+				transform: rotateX(-45deg);
+				/* transform: rotateY(45deg); */
+			}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="demo"></div>
+	</div>
+</body>
+</html>

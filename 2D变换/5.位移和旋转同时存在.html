@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<title>位移和旋转同时存在</title>
+	<style>
+		/* 位移和旋转同时存在时，必须先写位移 */
+		.container{
+			width: 400px;
+			height: 400px;
+			border: 1px solid black;
+			margin: 0 auto;
+			margin-top: 100px;
+		}
+		.demo{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			transition: 1s linear;
+		}
+		.point{
+			width: 10px;
+			height: 10px;
+			background-color: black;
+		}
+		.container:hover .demo{
+			transform: translateX(200px) rotate(360deg) ;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="demo">
+			<div class="point"></div>
+		</div>
+	</div>
+</body>
+</html>

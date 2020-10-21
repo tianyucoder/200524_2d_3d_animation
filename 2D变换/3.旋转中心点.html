@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>中心点</title>
+  <style>
+    /*
+			旋转中心点：transform-origin
+					transform-origin: 水平 垂直;
+						水平:left/center/right/具体像素值
+						垂直:top/center/bottom/具体像素值
+    */
+		.container{
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 0 auto;
+			margin-top: 200px;
+		}
+		.demo{
+				width: 200px;
+				height: 200px;
+			
+				background-color: purple;
+				transition: 1s linear;
+				/* transform-origin: left top; */
+				transform-origin: 20px 20px;
+			}
+			.demo:hover {
+				transform: rotate(-45deg);
+			}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="demo"></div>
+	</div>
+</body>
+</html>

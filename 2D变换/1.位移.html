@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>位移</title>
+	<style>
+		/* 2D变换transform
+				位移translate(水平,垂直):
+						1.是根据自身的位置进行水平和垂直的占位移动
+						2.方向：
+								水平：正值向右,负值向左
+								垂直：正值向下,负值向上
+						3.不影响周围元素
+						4.translateX() 和 translateY() 是单独控制横向和纵向
+						5.可以实现元素水平垂直居中
+		*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box1{
+			width: 200px;
+			height: 200px;
+			background-color: skyblue;
+			transform: translate(100px,100px);
+			/* transform: translateX(100px); */
+			/* transform: translateY(-100px); */
+		}
+		.box2{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 200px;
+			height: 200px;
+			background-color: orange;
+		}
+		.box3{
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			transform: translateX(300px);
+		}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+</body>
+</html>
