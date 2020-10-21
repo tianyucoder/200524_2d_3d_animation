@@ -3,8 +3,57 @@
 <head>
   <meta charset="UTF-8">
 	<title>扑克牌旋转</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			background-color: gray;
+		}
+		.container{
+			margin: 0 auto;
+			margin-top: 300px;
+			position: relative;
+			width: 200px;
+			height: 400px;
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			transform-origin: right top;
+			transition: 1s linear;
+		}
+		.container:hover img:nth-child(1){
+			transform: rotate(60deg);
+		}
+		.container:hover img:nth-child(2){
+			transform: rotate(120deg);
+		}
+		.container:hover img:nth-child(3){
+			transform: rotate(180deg);
+		}
+		.container:hover img:nth-child(4){
+			transform: rotate(240deg);
+		}
+		.container:hover img:nth-child(5){
+			transform: rotate(300deg);
+		}
+		.container:hover img:nth-child(6){
+			transform: rotate(360deg);
+		}
+	</style>
 </head>
 <body>
-	
+	<div class="container">
+		<img src="../imgs/pk1.png" alt="">
+		<img src="../imgs/pk2.png" alt="">
+		<img src="../imgs/pk1.png" alt="">
+		<img src="../imgs/pk2.png" alt="">
+		<img src="../imgs/pk1.png" alt="">
+		<img src="../imgs/pk3.png" alt="">
+	</div>
 </body>
 </html>

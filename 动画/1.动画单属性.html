@@ -26,6 +26,47 @@
 							alternate 正向有来有去
 							alternate-reverse 反向有来有去
 			*/
+		#demo{
+			width: 200px;
+			height: 20px;
+			margin: 0 auto;
+			margin-top: 200px;
+			background-color: skyblue;
+			animation-name: zhuan;
+			animation-duration: 2s;
+			animation-timing-function: linear;
+			/* animation-delay:2s; */
+			animation-iteration-count:1;
+			/* animation-direction:alternate; */
+		}
+		#demo:hover{
+			animation-play-state:paused;
+		}
+		@keyframes zhuan{
+			0%{
+				transform: rotate(0deg) scale(1.0);
+			}
+			10%{
+				background-color: pink;
+			}
+			30%{
+				background-color: red;
+			}
+			50%{
+				border-radius: 10px;
+			}
+			70%{
+				opacity: 0.3;
+				/* transform: scale(1.9); */
+			}
+			90%{
+				font-size: 90px;
+				/* transform: scale(0.2); */
+			}
+			100%{
+				transform:rotate(360deg) scale(1.5);
+			}
+		}
 		</style>
 	</head>
 	<body>

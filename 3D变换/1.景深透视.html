@@ -15,10 +15,51 @@
 						2.使用方式：给要实现效果的父元素设置
 						3.最佳效果的取值范围是：800px-1500px
      */
-		 
+		 .container{
+			 width: 600px;
+			 display: flex;
+			 margin: 0 auto;
+			 margin-top: 100px;
+		 }
+		.door_w{
+			width: 234px;
+			height: 488px;
+			border: 1px solid black;
+			/* transform-style: preserve-3d; */
+			perspective: 800px;
+		}
+		img{
+			transform-origin: left top;
+			transition: 1s linear;
+		}
+		.door_w:hover img{
+			transform: rotateX(45deg);
+		}
 	</style>
 </head>
 <body>
-	
+	<div class="container">
+		<div class="door_w">
+			<img src="../imgs/door.png" alt="">
+		</div>
+		<!-- <div class="door_w">
+			<img src="../imgs/door.png" alt="">
+		</div>
+		<div class="door_w">
+			<img src="../imgs/door.png" alt="">
+		</div>
+		<div class="door_w">
+			<img src="../imgs/door.png" alt="">
+		</div>
+		<div class="door_w">
+			<img src="../imgs/door.png" alt="">
+		</div>
+		<div class="door_w">
+			<img src="../imgs/door.png" alt="">
+		</div>
+		<div class="door_w">
+			<img src="../imgs/door.png" alt="">
+		</div> -->
+	</div>
 </body>
 </html>

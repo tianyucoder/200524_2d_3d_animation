@@ -3,8 +3,26 @@
 <head>
   <meta charset="UTF-8">
 	<title>缩放</title>
+	<style>
+		.container{
+			margin: 0 auto;
+			margin-top: 100px;
+			width: 252px;
+			height: 300px;
+			border: 1px solid black;
+			overflow: hidden;
+		}
+		img{
+			transition: 1s linear;
+		}
+		.container:hover img{
+			transform: scale(1.5);
+		}
+	</style>
 </head>
 <body>
-
+	<div class="container">
+		<img src="../imgs/huge.jpg" alt="">
+	</div>
 </body>
 </html>
