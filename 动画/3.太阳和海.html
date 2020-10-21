@@ -3,8 +3,88 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				background-color: skyblue;
+			}
+			.sun{
+				position: absolute;
+				top: 30px;
+				left: 30px;
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				background-color: white;
+			}
+			.sun::before{
+				content:'';
+				width: 100px;
+				height: 100px;
+				display: block;
+				border-radius: 50%;
+				background-color: white;
+				position: absolute;
+				top: 0;
+				left: 0;
+				animation: sun 1s linear infinite;
+			}
+			.sun::after{
+				content:'';
+				width: 100px;
+				height: 100px;
+				display: block;
+				border-radius: 50%;
+				background-color: white;
+				position: absolute;
+				top: 0;
+				left: 0;
+				animation: sun 1s linear 0.5s infinite;
+			}
+			.sea1{
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+				height: 200px;
+				opacity: 0.6;
+				background-image: url('../imgs/1.png');
+				animation: sea 1s linear infinite alternate;
+			}
+			.sea2{
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+				height: 200px;
+				opacity: 0.3;
+				background-image: url('../imgs/2.png');
+				animation: sea 1s linear 0.5s infinite alternate;
+			}
+			@keyframes sun{
+				form{
+					transform: scale(1.0);
+					opacity: 1.0;
+				}
+				to{
+					transform: scale(1.9);
+					opacity: 0;
+				}
+			}
+			@keyframes sea{
+				form{
+					bottom: 0;
+				}
+				to{
+					bottom: -40px;
+				}
+			}
+		</style>
 	</head>
 	<body>
-		
+		<div class="sun"></div>
+		<div class="sea1"></div>
+		<div class="sea2"></div>
 	</body>
 </html>
